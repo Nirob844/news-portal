@@ -11,51 +11,43 @@
 
 <body>
     <header>
-        <section class="container">
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand bg-light text-primary" href="#">Daily News</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active " aria-current="page" href="#">Home</a>
-                            </li>
-
-                        </ul>
-                        <form class="d-flex" role="search">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">News</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active " aria-current="page" href="#">Blog</a>
-                                </li>
-
-                            </ul>
-                        </form>
-                    </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container py-2">
+                <a class="navbar-brand text-white fw-bold fs-4" href="#">News24</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="./html/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link fw-bold" href="#">Contact Us</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-            <hr>
-        </section>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section class="container">
-            <div class="text-center">
-                <div id="all-menu" class="row mt-5">
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-3 border-end">
+                    <!-- Category section -->
+                    <h3 class="text-center mb-2 fw-bold">Categorys</h3>
+                    <div class="" id="category-area">
 
+                    </div>
                 </div>
+
             </div>
-
-        </section>
-        <section id="news-detail" class="container mt-5">
-
         </section>
     </main>
 
