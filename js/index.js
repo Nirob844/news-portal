@@ -83,7 +83,7 @@ const displayNews = async (newsesData) => {
                             <div class="col-9 col-md-6 d-flex align-items-center">
                                 <img src="${author.img}" class="news-author-img rounded-circle"/>
                                 <p class="ms-3">Name: ${author.name ? news.author.name : 'Name not found'} <br />
-                                    <span class="text-success news-author-published">Published: ${author.published_date ? author.published_date : 'Not Found'}</span>
+                                    <span class="text-dark news-author-published">Published: ${author.published_date ? author.published_date : 'Not Found'}</span>
                                 </p>
                             </div>
                             <div class="col-3 col-md-3">
@@ -122,6 +122,24 @@ const newsDetailsLoad = async (id) => {
     const newsData = await response.json();
     displayNewsDetails(newsData.data)
 }
-
+// dispaly news details useing a modal
+const displayNewsDetails = (newsData) => {
+    const modalContainer = document.getElementById('news-detais-modal');
+    modalContainer.innerHTML = ""
+    const modalDiv = document.createElement('div');
+    modalDiv.innerHTML = `
+    <div class="modal-header bg-dark text-white text-justify">
+        <p class="modal-title" id="exampleModalLabel">${newsData[0].title}</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <span>${newsData[0].details}</span>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+    </div>
+    `
+    modalContainer.appendChild(modalDiv)
+}
 
 categoryDisplay()
